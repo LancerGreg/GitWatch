@@ -14,6 +14,12 @@
 
 
   <ItemGroup>
+    <ProjectReference Include="..\GitWatch.Data\GitWatch.Data.csproj" />
+    <ProjectReference Include="..\GitWatch.Domain\GitWatch.Domain.csproj" />
+  </ItemGroup>
+
+
+  <ItemGroup>
     <Folder Include="Controllers\" />
   </ItemGroup>
 
