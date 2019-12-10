@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GitWatch.Api", "GitWatch.Ap
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GitWatch.Domain", "GitWatch.Domain\GitWatch.Domain.csproj", "{C634DF76-7C6C-4326-AA17-A767AAF840DF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GitWatch.Data", "GitWatch.Data\GitWatch.Data.csproj", "{B1C0A486-622A-424F-8E43-2DB2EE7A70F9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{C634DF76-7C6C-4326-AA17-A767AAF840DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C634DF76-7C6C-4326-AA17-A767AAF840DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C634DF76-7C6C-4326-AA17-A767AAF840DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1C0A486-622A-424F-8E43-2DB2EE7A70F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1C0A486-622A-424F-8E43-2DB2EE7A70F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1C0A486-622A-424F-8E43-2DB2EE7A70F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1C0A486-622A-424F-8E43-2DB2EE7A70F9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
