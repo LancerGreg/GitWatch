@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Grace.DependencyInjection.Extensions" Version="7.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="2.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\GitWatch.Data\GitWatch.Data.csproj" />
+    <ProjectReference Include="..\GitWatch.Domain\GitWatch.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

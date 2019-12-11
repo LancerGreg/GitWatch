@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using GitWatch.Api.Options;
+using GitWatch.DependencyInjection;
+using Grace.AspNetCore.MVC;
+using Grace.DependencyInjection;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -29,6 +32,12 @@ namespace GitWatch.Api
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
             services.AddSwaggerGen(service => { service.SwaggerDoc("v1", new Info { Title = "GitWatch API", Version = "v1" }); });
+        }
+
+        public void ConfigureContainer(IInjectionScope scope)
+        {
+            GraceContainer.ConfigureContainer(scope, Configuration);
+            scope.SetupMvc();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

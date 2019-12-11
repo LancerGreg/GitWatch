@@ -7,15 +7,15 @@
 
 
   <ItemGroup>
+    <PackageReference Include="Grace.AspNetCore.Hosting" Version="7.0.1" />
+    <PackageReference Include="Grace.AspNetCore.MVC" Version="7.0.1" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
-    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="4.0.1" />
   </ItemGroup>
 
 
   <ItemGroup>
-    <ProjectReference Include="..\GitWatch.Data\GitWatch.Data.csproj" />
-    <ProjectReference Include="..\GitWatch.Domain\GitWatch.Domain.csproj" />
+    <ProjectReference Include="..\GitWatch.DependencyInjection\GitWatch.DependencyInjection.csproj" />
   </ItemGroup>
 
 </Project>

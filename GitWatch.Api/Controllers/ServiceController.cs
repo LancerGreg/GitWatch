@@ -19,7 +19,7 @@ namespace GitWatch.Api.Controllers
         private readonly IProjectRepository _projectRepository;
         private readonly IProjectService _projectService;
 
-        public ServiceController(ProjectRepository projectRepository, ProjectService projectService)
+        public ServiceController(IProjectRepository projectRepository, IProjectService projectService)
         {
             _projectRepository = projectRepository;
             _projectService = projectService;
