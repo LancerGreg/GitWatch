@@ -5,6 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Octokit.Reactive" Version="0.36.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\GitWatch.Domain\GitWatch.Domain.csproj" />
   </ItemGroup>
 
