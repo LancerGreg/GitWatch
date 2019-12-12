@@ -8,6 +8,6 @@ namespace GitWatch.Domain.Services
 {
     public interface IProjectService
     {
-        Task<IndexViewModel> ProjectPages(string login, DateTime startDate, int page = 1);
+        Task<IndexViewModel> ProjectPages(string login, string password, DateTime startDate, int page = 1);
     }
 }
