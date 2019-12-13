@@ -29,9 +29,14 @@ namespace GitWatch.Api.Controllers
         /// Repository pages
         /// </summary>        
         [ProducesResponseType(typeof(IndexViewModel), 200)]
-        [ProducesResponseType(500)]
+        [ProducesResponseType(401)]
         [HttpGet("api/repository_from_git_hub")]
         public async Task<IActionResult> GetGitHubRepositories(string login, string password, DateTime startDate) =>
-            new OkObjectResult(await _projectService.ProjectPages(login, password, startDate));
+            await (await _projectService.ProjectPages(login, password, startDate))
+                .MatchAsync<IActionResult>(
+                    async o => { 
+                        return await Task.FromResult(new OkObjectResult(o)); },
+                    async ex => { 
+                        return await Task.FromResult(new BadRequestObjectResult(ex.GetType().Name)); });
     }
 }

@@ -9,6 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\GitWatch.Core\GitWatch.Core.csproj" />
     <ProjectReference Include="..\GitWatch.Domain\GitWatch.Domain.csproj" />
   </ItemGroup>
 

@@ -15,6 +15,7 @@
 
 
   <ItemGroup>
+    <ProjectReference Include="..\GitWatch.Core\GitWatch.Core.csproj" />
     <ProjectReference Include="..\GitWatch.DependencyInjection\GitWatch.DependencyInjection.csproj" />
   </ItemGroup>
 

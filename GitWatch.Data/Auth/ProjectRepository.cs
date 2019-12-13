@@ -1,4 +1,6 @@
-﻿using GitWatch.Domain.Models;
+﻿using GitWatch.Core;
+using GitWatch.Core.ExceptionError;
+using GitWatch.Domain.Models;
 using GitWatch.Domain.Repositories;
 using Octokit;
 using System;
@@ -13,7 +15,6 @@ namespace GitWatch.Data.Auth
     {
         public const string GitHubUri = "https://api.github.com";
         public ProjectModel project = new ProjectModel();
-        public DateTime dateStart = DateTime.Now.AddDays(-2);
 
         public async Task<Repository> GetStargazersCount()
         {
@@ -21,14 +22,14 @@ namespace GitWatch.Data.Auth
             return repositories.Items.First();
         }
 
-        public async Task<int> GetCommitCount()
+        public async Task<int> GetCommitCount(DateTime dateStart)
         {
             var request = new CommitRequest { Since = dateStart, Until = DateTime.Now };
-            var commits = await project._client.Repository.Commit.GetAll(project._repositoryId, request);
-            return commits.Count();
+            var comints = await project._client.Repository.Commit.GetAll(project._repositoryId, request);
+            return comints.Count();
         }
 
-        public async Task<int> GetContributorsCount()
+        public async Task<int> GetContributorsCount(DateTime dateStart)
         {
             var request = new CommitRequest { Since = dateStart, Until = DateTime.Now };
             var commits = await project._client.Repository.Commit.GetAll(project._repositoryId, request);

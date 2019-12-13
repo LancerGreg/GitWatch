@@ -9,7 +9,7 @@ namespace GitWatch.Domain.Repositories
     public interface IProjectRepository
     {
         Task<Repository> GetStargazersCount();
-        Task<int> GetCommitCount();
-        Task<int> GetContributorsCount();
+        Task<int> GetCommitCount(DateTime dateStart);
+        Task<int> GetContributorsCount(DateTime dateStart);
     }
 }

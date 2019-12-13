@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29503.13
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GitWatch.Api", "GitWatch.Api\GitWatch.Api.csproj", "{959B85FA-3F20-4D99-8EB1-EEFC620CCB44}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GitWatch.Api", "GitWatch.Api\GitWatch.Api.csproj", "{959B85FA-3F20-4D99-8EB1-EEFC620CCB44}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GitWatch.Domain", "GitWatch.Domain\GitWatch.Domain.csproj", "{C634DF76-7C6C-4326-AA17-A767AAF840DF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GitWatch.Domain", "GitWatch.Domain\GitWatch.Domain.csproj", "{C634DF76-7C6C-4326-AA17-A767AAF840DF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GitWatch.Data", "GitWatch.Data\GitWatch.Data.csproj", "{B1C0A486-622A-424F-8E43-2DB2EE7A70F9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GitWatch.Data", "GitWatch.Data\GitWatch.Data.csproj", "{B1C0A486-622A-424F-8E43-2DB2EE7A70F9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GitWatch.DependencyInjection", "GitWatch.DependencyInjection\GitWatch.DependencyInjection.csproj", "{5D4181AF-031F-401C-8CAA-74E6A7225935}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GitWatch.DependencyInjection", "GitWatch.DependencyInjection\GitWatch.DependencyInjection.csproj", "{5D4181AF-031F-401C-8CAA-74E6A7225935}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GitWatch.Core", "GitWatch.Core\GitWatch.Core.csproj", "{13669FD2-5E06-4165-BB05-252D501676FD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{5D4181AF-031F-401C-8CAA-74E6A7225935}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5D4181AF-031F-401C-8CAA-74E6A7225935}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5D4181AF-031F-401C-8CAA-74E6A7225935}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13669FD2-5E06-4165-BB05-252D501676FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13669FD2-5E06-4165-BB05-252D501676FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13669FD2-5E06-4165-BB05-252D501676FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13669FD2-5E06-4165-BB05-252D501676FD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
