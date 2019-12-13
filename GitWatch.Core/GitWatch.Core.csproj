@@ -5,11 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Octokit" Version="0.36.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\GitWatch.Core\GitWatch.Core.csproj" />
+    <PackageReference Include="Flurl.Http" Version="2.4.2" />
   </ItemGroup>
 
 </Project>
