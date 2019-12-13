@@ -6,6 +6,9 @@ namespace GitWatch.Core.ExceptionError
 {
     public enum ExceptionTerm
     {
-        UserNotFoundFailure
+        UserNotFoundFailure,
+        DataRepositoryFailure,
+        SearchRepoFailure,
+        LoginOrPasswordFailure
     }
 }

@@ -1,4 +1,5 @@
-﻿using GitWatch.Domain.Models;
+﻿using GitWatch.Core;
+using GitWatch.Domain.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -8,6 +9,6 @@ namespace GitWatch.Domain.Services
 {
     public interface IProjectService
     {
-        Task<IndexViewModel> ProjectPages(string login, string password, DateTime startDate, int page = 1);
+        Task<ITry<IndexViewModel>> ProjectPages(string login, string password, DateTime startDate, int page = 1);
     }
 }
