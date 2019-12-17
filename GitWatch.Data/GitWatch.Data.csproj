@@ -5,7 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Owin.Security.OAuth" Version="4.1.0" />
     <PackageReference Include="Octokit.Reactive" Version="0.36.0" />
+    <PackageReference Include="Owin" Version="1.0.0" />
   </ItemGroup>
 
   <ItemGroup>

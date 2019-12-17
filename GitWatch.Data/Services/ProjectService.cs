@@ -17,6 +17,16 @@ namespace GitWatch.Data.Services
         {
             List<ProjectRepository> result = new List<ProjectRepository>();
 
+            var clientId = "dfe59b98523cdd044f45";
+            var clientSecret = "d9770ec38691199d7c550ad11cdca15ffc9994f4";
+            var client = new GitHubClient(new ProductHeaderValue("GitWatch"));
+
+            var request = new OauthLoginRequest(clientId)
+            {
+                // other parameters
+                RedirectUri = new Uri("https://localhost:44332/swagger/index.html")
+            };
+
             var credentials = new Credentials(login, password);
             var connection = new Connection(new ProductHeaderValue("Whatever"))
             {
@@ -26,6 +36,22 @@ namespace GitWatch.Data.Services
             var repositories = await gitClient.AsOption().MatchAsync<ITry<SearchRepositoryResult>>(async r => await Try.EncloseAsync(
                 async () => await r.Search.SearchRepo(new SearchRepositoriesRequest($"pushed:>={startDate.ToString("yyyy-MM-dd")}"))),
                     async () => await Task.FromResult(new Failure<SearchRepositoryResult>(new SearchRepoFailure())));
+
+            var miscellaneousRateLimit = await gitClient.Miscellaneous.GetRateLimits();
+
+            //  The "core" object provides your rate limit status except for the Search API.
+            var coreRateLimit = miscellaneousRateLimit.Resources.Core;
+
+            var howManyCoreRequestsCanIMakePerHour = coreRateLimit.Limit;
+            var howManyCoreRequestsDoIHaveLeft = coreRateLimit.Remaining;
+            var whenDoesTheCoreLimitReset = coreRateLimit.Reset; // UTC time
+
+            // the "search" object provides your rate limit status for the Search API.
+            var searchRateLimit = miscellaneousRateLimit.Resources.Search;
+
+            var howManySearchRequestsCanIMakePerMinute = searchRateLimit.Limit;
+            var howManySearchRequestsDoIHaveLeft = searchRateLimit.Remaining;
+            var whenDoesTheSearchLimitReset = searchRateLimit.Reset; // UTC time
 
             try
             {
